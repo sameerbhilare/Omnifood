@@ -1,0 +1,210 @@
+/**
+ * Approach -
+ * for each breakpoint, view the page and fix everything which is broken.
+ */
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Big tablets to 1200px (width smaller than 1140px row defined in style.css for row class ) */
+/*-------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1200px) {
+    
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%; /* 0 on top and bottom, 2% on ledt and right. */
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+
+
+
+/* Small tablets to Big tablets: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+    /* it's great that we have used all font sizes in %, that's now incredibly helpful. */
+    body { font-size: 18px; } /* reduce from 20px to 18px */
+    
+    section { padding: 60px 0; } /* reduce from 80px to 60px */
+    
+    .long-copy {
+        width:80%; /* increasing the width from 70 to 80% */
+        margin-left: 10%; /* reducing margin from 15 to 10 bcz we increased width.
+                             80%(width) + 10%(margin-left) + 10%(margin-right) => 100% */
+    }
+    
+    .steps-box {
+        margin-top: 10px; /* remove some whitespace by reducing margin-top */
+    }
+    
+    .steps-box:last-child {
+        margin-top: 10px; /* reducing 10px */
+    }
+    
+    .works-step {
+        margin-bottom: 40px; /* reducing from 50px to 40px */
+    }
+    
+    .works-step:last-of-type {
+        margin-bottom: 60px; /* reducing from 80px to 60px */
+    }
+    
+    .app-screen {
+        width: 50%; /* increase image width from 40% to 50% */
+    }
+    
+    .btn-app img {
+        height: 45px; /* reduce image height and width from 50% to 45% */
+        width: auto;
+    }
+    
+    .icon-small {
+        width: 17px; /* decrease from 30px to 17px */
+        margin-right: 5px; /* decrease from 10px to 5px */
+    }
+    
+    .city-feature {
+        font-size: 90%; /* decrease from 100% to 90% */
+    }
+    
+    .plan-box {
+        width: 100%;
+        margin-left: 0%; /* 100%(width) + 0%(margin-left) + -%(margin-right) => 100% */
+    }
+    
+    .plan-price {
+        font-size: 250%; /* decrease from 300 to 250% */
+    }
+    
+    .contact-form {
+        width: 80%; /* increase width from 60 to 80% */
+    }
+    
+    .footer-nav li,
+    .social-links li {
+        margin-right: 15px; /* decrease from 20 to 15px */
+    }
+}
+
+
+
+/*---------------------------------------------------------------------------*/
+/* Small phones to Small Tablets: from 481px to 767px */
+/*---------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    
+    /* it's great that we have used all font sizes in %, that's now incredibly helpful. */
+    body { font-size: 16px; } /* reduce from 20px to 16px */
+    
+    section { padding: 30px 0; } /* reduce from 80px to 30px */
+    
+    h1 { font-size: 180% }
+    
+    h2 { font-size: 150% }
+    
+    .row, 
+    .hero-text-box { padding: 0 4%; } 
+    
+    .col { 
+        width: 100%; /* columns should not be side by side but stacked below one another. */
+        margin: 0 0 4% 0;
+    } 
+    
+    .main-nav { display: none; }
+    
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px;        
+    }
+    
+    .main-nav li {
+        display: block; /* to show li elemnts one below another. */
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0; /* we don't want to show border for nav links on mobile phone */
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+    
+    .sticky .mobile-nav-icon {
+        margin-top: 10px;
+    }
+    
+    .sticky .mobile-nav-icon ion-icon {
+        color: #555;
+    }
+
+    /* to apply styles only when we have sticky class */
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0px; /* top, bottom => 10px. left, right => 0px.*/
+    }    
+    
+    .long-copy {
+        width: 100%; /* increasing the width from 70 to 80% */
+        margin-left: 0%; /* reducing margin from 15 to 0 bcz we increased width.
+                             100%(width) + 0%(margin-left) + 0%(margin-right) => 100% */
+    }
+        
+    .works-step {
+        margin-bottom: 20px; /* reducing from 50px to 20px */
+    }
+    
+    .works-step:last-of-type {
+        margin-bottom: 20px; /* reducing from 80px to 20px */
+    }
+    
+    .works-step div {
+        height: 40px; /* both height and width should be same as we want a circle here. descrease from 55 to 40px */
+        width: 40px;
+        padding: 4px; /* reducing from 5px to 4px */
+        margin-right: 15px; /* reducing from 25px to 15px */
+        font-size: 120%;
+    }
+    
+    .steps-box:first-child {
+        text-align: center; /* The text-align property doesn't work only for text. 
+                              It actually does work for all inline, or inline block elements 
+                              and the image is one of those inline block elements.
+                              And so, it will then be aligned to the center side of this box. */
+    }
+    
+    .app-screen {
+        width: 40%; /* decrease image width from 40% to 40% */
+    }
+    
+    
+}
+
+
+
+/*-------------------------------*/
+/* Small phones: from 0 to 480px */
+/*-------------------------------*/
+@media only screen and (max-width: 480px) {
+    
+    section { padding: 25px 0; } /* reduce from 80px to 25px */
+    
+    .contact-form {
+        width: 100%; /* increase width from 60 to 100% */
+    }
+    
+    .footer-nav li,
+    .social-links li {
+        margin-right: 10px;
+    }
+}
+
